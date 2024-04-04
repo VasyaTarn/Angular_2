@@ -1,0 +1,12 @@
+<div class="container">
+    <img [src]="getImageSrc()">
+    <div class="circle-cotainer">
+        <div *ngFor="let color of colors; let i = index" 
+        class="circle" 
+        [ngClass]="{ 'clicked': selectedCircleIndex == i }"
+        [ngStyle]="{ 'background-color': color }"
+        (click)="selectCircle(i)">
+        </div>
+    </div>
+</div>
+
